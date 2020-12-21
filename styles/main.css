@@ -1,3 +1,54 @@
 * {
     text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+h4 {
+    margin: 0 auto;
+
+}
+
+.stat-bar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:relative;
+}
+
+.stat-name {
+    text-align: center;
+    left: 50%;
+}
+
+
+
+.stat-bars {
+    -webkit-appearance: none;;
+    width: 250%;
+    height: 15px;
+    margin: -5;
+    border: 2px dotted black;
+    
+}
+
+/* Monster Div */
+
+.monster-container {
+    width: 600px;
+    height: 600px;
+    background-color: lightblue;
+    left: 35%;
+}
+
+.control-buttons {
+    width: 200;
+    height: 100;
 }

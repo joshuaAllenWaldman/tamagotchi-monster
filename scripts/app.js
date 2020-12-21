@@ -3,8 +3,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 //landing buttons
-const startGame = docunenb
+const startGameBtn = document.getElementById('start-game');
+const aboutBtn = document.getElementById('about')
 
+
+
+
+// Stat meters
+
+const hungerMeter = document.getElementById('hunger');
+const boredomMeter = document.getElementById('boredom');
+const tirednessMeter = document.getElementById('tiredness');
 
 
 
@@ -38,4 +47,6 @@ class Monster {
         
     }
 } 
+
+
 
