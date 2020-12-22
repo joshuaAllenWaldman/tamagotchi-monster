@@ -25,33 +25,37 @@ let tirednessMeter = document.getElementById('tiredness');
 
 //This is the monster class that the user's creature will be created from. 
 class Monster {
-    constructor(name, hungerLevel, tirednessLevel, boredomLevel){
+    constructor(name){
         this.name = name;
-        this.hungerLevel = hungerLevel;
-        this.tirednessLevel = tirednessLevel;
-        this.boredomLevel = boredomLevel;
+        this.hungerLevel = 0;
+        this.tirednessLevel = 0;
+        this.boredomLevel = 0;
     }
 
     sleep() {
         this.tirednessLevel = 0;
         tirednessMeter.value = 0;
-        console.log(`sleep was used ${player.tirednessLevel}`)
+        console.log('tiredness ' + this.tirednessLevel);
+   
     }
     play () { 
         this.boredomLevel -= 5;
         boredomMeter.value -= 5;
+        console.log('boredom ' + this.boredomLevel)
 
         //trigger play animation
     }
     eat () {
         this.hungerLevel = 0;
         hungerMeter.value = 0;
+        console.log('hunger ' + this.hungerLevel)
     }
-    age () {
-        
-    }
+   
 } 
 
+
+
+const player = new Monster('eventual input', );
 
 
 
@@ -64,15 +68,14 @@ function gameOn ( ){
         player.tirednessLevel += 5;
         player.boredomLevel += 3;
         hungerMeter.value = player.hungerLevel;
-        tirednessMeter.value += player.tirednessLevel;
-        boredomMeter.value += player.boredomLevel;
-        console.log(player)
+        tirednessMeter.value = player.tirednessLevel;
+        boredomMeter.value = player.boredomLevel;
+        console.log(player.tirednessLevel)
     }, 3000);
 }
 
 
 
-const player = new Monster('inputer', 0, 0, 0);
 
 gameOn(); 
 console.log(player);
