@@ -31,7 +31,7 @@ function getMonsterName (){
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-///////////////////////////    Game Objects and Logic     /////////////////////////
+///////////////////////////    Game Objects and Logic     /////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
 //This is the monster class that the user's creature will be created from. 
@@ -68,6 +68,8 @@ class Monster {
 const player = new Monster(monsterName);
 
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////    Game Start/End and Logic     /////////////////////
 
 function startGame ( ){
     gameOn();
@@ -77,14 +79,6 @@ function startGame ( ){
     $('.game-over').css('display', 'none')
     $('.username-display').text(monsterName)
 }
-
-
-
-
-
-
-
-
 
 
 //Game timer      if need STOP  look up clearInterval
@@ -114,21 +108,18 @@ function reset () {
     player.tirednessLevel = 0;
     player.boredomLevel = 0;
     player.hungerLevel = 0;
-    player.age = 0;
+    player.age = 1;
     hungerMeter.value = player.hungerLevel;
     tirednessMeter.value = player.tirednessLevel;
     boredomMeter.value = player.boredomLevel;
+    $('#age-display').text(player.age)
+
     gameOn();
     $('.start-screen').css('display', 'none');
     $('.game-on').css('display', 'block');
     $('.game-over').css('display', 'none');
 }
 
-
-// gameOn(); 
-console.log(player);
- 
- 
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////    Event Listeners    /////////////////////////////
