@@ -39,7 +39,7 @@ class Monster {
    
     }
     play () { 
-        this.boredomLevel -= 5;
+        this.boredomLevel = this.boredomLevel - 5;
         boredomMeter.value -= 5;
         console.log('boredom ' + this.boredomLevel)
 
@@ -70,7 +70,7 @@ function gameOn ( ){
         hungerMeter.value = player.hungerLevel;
         tirednessMeter.value = player.tirednessLevel;
         boredomMeter.value = player.boredomLevel;
-        console.log(player.tirednessLevel)
+        console.log(player.hungerLevel, player.tirednessLevel, player.boredomLevel)
     }, 3000);
 }
 
@@ -84,6 +84,6 @@ console.log(player);
 
 // EVENT LISTENERS
 
-feedBtn.addEventListener('click', player.eat);
-playBtn.addEventListener('click', player.play);
-sleepBtn.addEventListener('click', player.sleep)
+feedBtn.addEventListener('click', function () { player.eat()});
+playBtn.addEventListener('click', function () {player.play()});
+sleepBtn.addEventListener('click', function () {player.sleep()})
