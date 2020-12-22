@@ -64,14 +64,14 @@ const player = new Monster('eventual input', );
 //Game timer
 function gameOn ( ){
     const gameTimer = setInterval(function () {
-        player.hungerLevel += 6;
-        player.tirednessLevel += 5;
-        player.boredomLevel += 3;
+        player.hungerLevel += 3;
+        player.tirednessLevel += 3;
+        player.boredomLevel += 4;
         hungerMeter.value = player.hungerLevel;
         tirednessMeter.value = player.tirednessLevel;
         boredomMeter.value = player.boredomLevel;
-        console.log(player.hungerLevel, player.tirednessLevel, player.boredomLevel)
-    }, 3000);
+        console.log(player.hungerLevel, player.boredomLevel, player.tirednessLevel )
+    }, 1000);
 }
 
 
@@ -84,6 +84,6 @@ console.log(player);
 
 // EVENT LISTENERS
 
-feedBtn.addEventListener('click', function () { player.eat()});
+feedBtn.addEventListener('click', function () {player.eat()});
 playBtn.addEventListener('click', function () {player.play()});
 sleepBtn.addEventListener('click', function () {player.sleep()})
