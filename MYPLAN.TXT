@@ -40,3 +40,4 @@ Global Gameplay stages
 
 2. Creature stats need to dimish over time. 
     - Set an interval for the hunger, tiredness and boredome to increase over time.
+    

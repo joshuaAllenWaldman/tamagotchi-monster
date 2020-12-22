@@ -14,6 +14,8 @@ const sleepBtn = document.getElementById('sleep')
 
 
 
+
+
 // Stat meters
 
 let hungerMeter = document.getElementById('hunger');
@@ -77,10 +79,10 @@ function gameOn ( ){
 
 
 
-gameOn(); 
+// gameOn(); 
 console.log(player);
  
-
+ 
 
 // EVENT LISTENERS
 

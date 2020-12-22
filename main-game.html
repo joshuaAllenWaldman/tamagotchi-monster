@@ -12,11 +12,22 @@
     <title>Tamagotchi Monster</title>
 </head>
 <body>
+
+    <main></main>
     <header>
-    <h2 id="monsterName">Monster's name</h2>
+    <h2 id="monsterName">Digital Monster Caretaker Simulator</h2>
     </header>
 
+    <main class="start-screen">
+        <h2 class="greeting">Name Your Monster!</h2>
+        <input type="name" id="user-name"><br>
+        <button id="start-game-button">Start Game</button>
+        <button id="about-button">About</button>
+    </main>
 
+
+
+<main class="game-on">
     <section class="stat-bar-container">
         <div class="stat-group hunger">
             <h4 class="stat-name hunger-bar-text">Hunger</h4>
@@ -43,7 +54,15 @@
         <button id="feed">Feed</button>
         <button id="play">Play</button> 
         <button id="sleep">Sleep</button>
+
+
     </section>
+</main>
+
+<div class="game-over">
+    Your monster died of neglect. Game Over.
+</div>
+    
 
 </body>
 </html>

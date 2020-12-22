@@ -9,6 +9,9 @@ body {
     height: 100vh;
 }
 
+.game-on {
+    display: none;
+}
 
 
 h4 {
@@ -35,7 +38,7 @@ h4 {
     width: 250%;
     height: 15px;
     margin: -5;
-    border: 2px dotted black;
+    border: 2px solid black;
     
 }
 
@@ -51,4 +54,8 @@ h4 {
 .control-buttons {
     width: 200;
     height: 100;
+}
+
+.game-over{
+    display: none;
 }
