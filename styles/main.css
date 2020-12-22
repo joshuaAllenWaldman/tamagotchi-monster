@@ -8,8 +8,16 @@ body {
     width: 100vw;
     height: 100vh;
 }
+/* Display windows */
 
+.start-screen {
+    display: block;
+}
 .game-on {
+    display: none;
+}
+
+.game-over {
     display: none;
 }
 

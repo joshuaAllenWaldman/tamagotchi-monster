@@ -28,6 +28,7 @@
 
 
 <main class="game-on">
+    <h2 class="username-display"></h2>
     <section class="stat-bar-container">
         <div class="stat-group hunger">
             <h4 class="stat-name hunger-bar-text">Hunger</h4>
@@ -42,7 +43,12 @@
         <div class="stat-group tirednes">
             <h4 class="stat-name tiredness-bar-text">Tiredness</h4>
             <progress class="stat-bars" id="tiredness" value="0" max="50"></progress>
+        </div> 
+        <div class="stat-group age">
+            <h4 class="stat-name age">Age</h4>
+            <p id="age-display">1</p>
         </div>
+
 
     </section>
 
@@ -61,6 +67,7 @@
 
 <div class="game-over">
     Your monster died of neglect. Game Over.
+    <button id="try-again-button">Try Again?</button>
 </div>
     
 
