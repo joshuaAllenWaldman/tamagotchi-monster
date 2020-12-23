@@ -25,10 +25,30 @@ body {
     display: none;
 }
 
+#monsterName {
+    font-size: 30px;
+    color: #FFFFFF;
+    /* background: #333333; */
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    animation: titleShadowPulse infinite 4s alternate;
+    margin-bottom: 40px;
+}
+
+@keyframes titleShadowPulse {
+    from {
+        text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+
+    }
+
+    to {
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    }
+}
 
 /* //////////////////////////////////////// */
             /* Start Screen */
 /* //////////////////////////////////////// */
+
 
 .start-screen {
     padding-top: 40px;
@@ -42,7 +62,7 @@ body {
 input {
     height: 40px;
     margin-bottom: 40px;
-    
+    text-align: left;
 }
 
 .start-screen > button {
@@ -118,7 +138,6 @@ h4.stat- {
     height: 20px;
     background-color: green;
     border: 2px solid black;
-
     font-weight: bold;
 }
 
@@ -126,7 +145,7 @@ h4.stat- {
 
 
 /* ///////////////////////////////// */
-/* Monster Div */
+/* Monster Container and Creature */
 .monster-box-container {
     display: flex;
     justify-content: center;
@@ -140,25 +159,148 @@ h4.stat- {
     background-color: steelblue;
     display: flex;
     justify-content: center;
+    position: relative;
 }
-
-#outer-shell {
-    background-color: darkslategrey;
+/* tamagotchi casing */
+#outer-shell { 
+    background-color: ivory;
     width: 400px;
     height: 500px;
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    -webkit-box-shadow: 11px 8px 8px 1px #000000; 
+    box-shadow: 11px 8px 8px 1px #000000;
+
 }
 
-#inner-shell {
-    background-color: ivory;
+/* tamagotchi screen */
+#inner-shell { 
+    background-color: grey;
+    top: -10px;
     width: 300px;
-    height: 400px;
-    border: 4px double green;
-    border-radius: 50%;
+    height: 300px;
+    border: 10px solid green;
+    border-radius: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
+/* creature */
+.body-container {
+    
+}
+
+.creature-body {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+}
+
+.eye-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+}
+
+.left-eye {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 75% 0;
+    transform: rotate(45deg);
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.left-pupil {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    border: 3px solid blue;
+
+    border-radius: 100px;
+    
+}
+
+
+.right-eye{ 
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 75% 0;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-pupil {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    border: 3px solid blue;
+    border-radius: 100px;
+    
+}
+
+.mouth-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+.mouth {
+    width: 30px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+ellipse {
+    width: 30px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+.legs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left-leg {
+    width: 25px;
+    height: 40px;
+    background-color: #5a4040;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+ 
+}
+.right-leg {
+    width: 25px;
+    height: 40px;
+    background-color: #5a4040;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+}
+
+
 
 /* ///////////////////////////////// */
 /* Controls */

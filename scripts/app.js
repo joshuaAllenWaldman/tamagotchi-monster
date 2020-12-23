@@ -92,6 +92,14 @@ function gameOn ( ){
         tirednessMeter.value = player.tirednessLevel;
         boredomMeter.value = player.boredomLevel;
         if(player.boredomLevel > 51 || player.hungerLevel > 51 || player.tirednessLevel > 51){
+            if (player.boredomLevel > 51) {
+                $('#cause-of-death').text('boredom');
+            } else if (player.hungerLevel > 51) {
+                $('#cause-of-death').text('hunger');
+            } else if (player.tirednessLevel > 51) {
+                $('#cause-of-death').text('tiredness');
+            } 
+
             $('.game-on').css('display', 'none');
             $('.game-over-screen').css('display', 'block');
             clearInterval(gameTimer);  
@@ -101,7 +109,6 @@ function gameOn ( ){
         player.age += 1;
         $('#age-display').text(player.age)
     }, 10000)
-
     
 }
 
