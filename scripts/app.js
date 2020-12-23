@@ -76,23 +76,24 @@ function startGame ( ){
     getMonsterName();
     $('.start-screen').css('display', 'none')
     $('.game-on').css('display', 'block')
-    $('.game-over').css('display', 'none')
+    $('.game-over-screen').css('display', 'none')
     $('.username-display').text(monsterName)
+    $('#game-over-name').text(monsterName)
 }
 
 
 //Game timer      if need STOP  look up clearInterval
 function gameOn ( ){
     const gameTimer = setInterval(function () {
-        player.hungerLevel += 1;
+        player.hungerLevel += 3;
         player.tirednessLevel += 2;
         player.boredomLevel += 3;
         hungerMeter.value = player.hungerLevel;
         tirednessMeter.value = player.tirednessLevel;
         boredomMeter.value = player.boredomLevel;
-        if(player.boredomLevel > 50 || player.hungerLevel > 50 || player.tirednessLevel > 50){
+        if(player.boredomLevel > 51 || player.hungerLevel > 51 || player.tirednessLevel > 51){
             $('.game-on').css('display', 'none');
-            $('.game-over').css('display', 'block');
+            $('.game-over-screen').css('display', 'block');
             clearInterval(gameTimer);  
         }
     }, 1000);
@@ -117,7 +118,7 @@ function reset () {
     gameOn();
     $('.start-screen').css('display', 'none');
     $('.game-on').css('display', 'block');
-    $('.game-over').css('display', 'none');
+    $('.game-over-screen').css('display', 'none');
 }
 
 

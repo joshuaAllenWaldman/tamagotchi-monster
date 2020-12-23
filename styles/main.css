@@ -15,34 +15,46 @@ body {
 /* Display windows */
 
 .start-screen {
-    display: block;
+    display: none;
 }
 .game-on {
-    display: none;
+    display: block;
 }
 
-.game-over {
+.game-over-screen {
     display: none;
 }
 
 
 /* //////////////////////////////////////// */
-            /* Start Windo */
+            /* Start Screen */
 /* //////////////////////////////////////// */
+
+.start-screen {
+    padding-top: 40px;
+    align-items: center;
+}
 
 .greeting {
-    margin: 175px 0 50px 0;
     font-size: 40px;
 }
 
 input {
-    height: 30px
+    height: 40px;
+    margin-bottom: 40px;
+    
 }
 
 .start-screen > button {
     margin-top: 10px;
-    width: 150px;
+    width: 160px;
     height: 50px;
+    background-color: yellow;;
+}
+
+.start-screen >button:hover {
+    color: green;
+    background-color: blue;
 }
 
 
@@ -62,9 +74,18 @@ h4.stat- {
 
 .stat-bar-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    
+   
+}
+.stat-bar-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    position:relative;
+    width: 75%;
+    /* position:relative; */  
 }
 
 .stat-name {
@@ -82,12 +103,13 @@ h4.stat- {
 
 .stat-bars {
     -webkit-appearance: none;
-    
-    width: 250%;
+    appearance: none;
+    width: 250px;
     height: 30px;
     margin: 5px;
     border: 2px solid black;
     color: green;
+    background-color: ;
 }
 
 #age-display {
@@ -109,12 +131,33 @@ h4.stat- {
     display: flex;
     justify-content: center;
     margin: 20px;
+    
 }
 
 .monster-box {
     width: 800px;
     height: 600px;
-    background-color: lightblue;
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+}
+
+#outer-shell {
+    background-color: darkslategrey;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+#inner-shell {
+    background-color: ivory;
+    width: 300px;
+    height: 400px;
+    border: 4px double green;
+    border-radius: 50%;
+
 }
 
 /* ///////////////////////////////// */
@@ -144,5 +187,20 @@ h4.stat- {
 }
 
 
+/* //////////////////////////////////////// */
+            /* Game Over screen */
+/* //////////////////////////////////////// */
 
+#game-over-message {
+    margin-top: 60px;
+}
 
+h1#game-over-message {
+    font-size: 70px;
+}
+
+#try-again-button {
+    margin-top: 5%;
+    width: 200px;
+    height: 100px;
+}
