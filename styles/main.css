@@ -3,12 +3,15 @@
     align-items: center;
     position: relative;
     font-family: 'Press Start 2P', cursive;
+    color: rgb(241, 255, 49);
 }
 
 body {
     width: 100vw;
     height: 100vh;  
     background-color: ivory;
+    background-image: url(/max-mckinnon-c9OCWLka764-unsplash.jpg);
+    background-size: cover;
 }
 
 /* //////////////////////// */
@@ -18,20 +21,20 @@ body {
     display: none;
 }
 .game-on {
-    display: block;
+    display: none;
 }
 
 .game-over-screen {
-    display: none;
+    display: block;
 }
 
 #monsterName {
     font-size: 30px;
-    color: #FFFFFF;
+    color: black;
     /* background: #333333; */
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-    animation: titleShadowPulse infinite 4s alternate;
-    margin-bottom: 40px;
+    animation: titleShadowPulse infinite 1s alternate;
+    margin: 50px 0 60px;
 }
 
 @keyframes titleShadowPulse {
@@ -56,20 +59,53 @@ body {
 }
 
 .greeting {
+    color: black;
     font-size: 40px;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    animation: titleShadowPulse infinite 1s alternate;
 }
+
+
 
 input {
     height: 40px;
     margin-bottom: 40px;
     text-align: left;
+    background-color: indigo;
+    animation: inputInticer 4s  infinite alternate ;
+}
+
+@keyframes inputInticer {
+    from {
+    background-color: indigo;
+    color: hotpink
+    }
+    25% {
+        background-color: hotpink;
+        color: black;
+    }
+    50% {
+        background-color: yellow;
+        color: red;
+
+    }
+    50% {
+        background-color: black;
+        color: white
+
+    }
+    to {
+    background-color: lawngreen;
+    color: blue;
+    }
 }
 
 .start-screen > button {
     margin-top: 10px;
     width: 160px;
     height: 50px;
-    background-color: yellow;;
+    background-color: rgb(27, 24, 206);
+    
 }
 
 .start-screen >button:hover {
@@ -156,7 +192,8 @@ h4.stat- {
 .monster-box {
     width: 800px;
     height: 600px;
-    background-color: steelblue;
+    background-color: none
+;
     display: flex;
     justify-content: center;
     position: relative;
@@ -164,6 +201,8 @@ h4.stat- {
 /* tamagotchi casing */
 #outer-shell { 
     background-color: ivory;
+    background-image: url(/cracked\ egg.jpg);
+    background-size: contain;
     width: 400px;
     height: 500px;
     display: flex;
@@ -180,6 +219,8 @@ h4.stat- {
 /* tamagotchi screen */
 #inner-shell { 
     background-color: grey;
+    background-image: url(/markus-spiske-iar-afB0QQw-unsplash.jpg);
+    background-size: contain;
     top: -10px;
     width: 300px;
     height: 300px;
@@ -193,8 +234,27 @@ h4.stat- {
 }
 /* creature */
 .body-container {
-    
+    position: relative;
+  
+  
+    animation: idleMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
+
+@keyframes idleMovement {
+    from {
+        transform: translateY(0%);
+    } 
+
+    to {
+        transform: translateY(30%);
+
+    }
+}
+
+
 
 .creature-body {
     width: 100px;
@@ -202,6 +262,7 @@ h4.stat- {
     background-color: black;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    border: 2px solid greenyellow ;
 
 }
 
@@ -281,6 +342,7 @@ ellipse {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
 .left-leg {
@@ -289,6 +351,8 @@ ellipse {
     background-color: #5a4040;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    border: 2px solid greenyellow ;
+
  
 }
 .right-leg {
@@ -297,6 +361,8 @@ ellipse {
     background-color: #5a4040;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    border: 2px solid greenyellow ;
+
 
 }
 
@@ -324,8 +390,10 @@ ellipse {
 }
 
 #feed, #play, #sleep {
+    font-size: 18px;
     width: 150px;
     height: 100px;
+    background-color: rgb(27, 24, 206);
 }
 
 
@@ -333,16 +401,38 @@ ellipse {
             /* Game Over screen */
 /* //////////////////////////////////////// */
 
-#game-over-message {
+#game-over-message, span {
+    color: black;
     margin-top: 60px;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    animation: titleShadowPulse infinite 1s alternate;
 }
 
 h1#game-over-message {
-    font-size: 70px;
+    color: black;
+    margin: 200px auto;
+    font-size: 100px;
+    border: hotpink;
+    animation: gameOverBlowUp 4s  1 forwards ;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    animation: titleShadowPulse infinite 1s alternate;
+
+
+}
+
+@keyframes gameOverBlowUp {
+    from {
+        scale: (.01);
+    }
+    to {
+        scale: (1);
+    }
 }
 
 #try-again-button {
     margin-top: 5%;
     width: 200px;
     height: 100px;
+    background-color: rgb(27, 24, 206);
+
 }

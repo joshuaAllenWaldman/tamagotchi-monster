@@ -69,11 +69,17 @@ const player = new Monster(monsterName);
 
 
 ///////////////////////////////////////////////////////////////////////////////
-///////////////////////////    Game Start/End and Logic     /////////////////////
+///////////////////////////    Game Start/End and Logic     ///////////////////
 
 function startGame ( ){
-    gameOn();
     getMonsterName();
+
+    if (monsterName === ''){
+        startGameBtn.disabled === true;
+        alert('You must enter a name to play.')
+        return;
+    }
+    gameOn();
     $('.start-screen').css('display', 'none')
     $('.game-on').css('display', 'block')
     $('.game-over-screen').css('display', 'none')
@@ -134,6 +140,7 @@ function reset () {
 ///////////////////////////////////////////////////////////////////////////////
 
 startGameBtn.addEventListener('click', startGame)
+aboutBtn.addEventListener('click', () => {alert(`If you have to ask...`); alert(`You'll never know`)})
 
 feedBtn.addEventListener('click', function () {player.eat()});
 playBtn.addEventListener('click', function () {player.play()});
