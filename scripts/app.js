@@ -105,9 +105,7 @@ function gameOn ( ){
             } else if (player.tirednessLevel > 51) {
                 $('#cause-of-death').text('tiredness');
             } 
-            setInterval(() => {
-                $('.body.container').addClass('container-dead');
-            }, 3000);
+            
             $('.game-on').css('display', 'none');
             $('.game-over-screen').css('display', 'block');
             clearInterval(gameTimer);  
