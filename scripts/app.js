@@ -118,6 +118,7 @@ function gameOn ( ){
     
 }
 
+//RESET AFTER GAME OVER
 function reset () {
     player.tirednessLevel = 0;
     player.boredomLevel = 0;
@@ -134,6 +135,12 @@ function reset () {
     $('.game-over-screen').css('display', 'none');
 }
 
+
+//GAME OVER ANIMATION
+
+function gameOverAnimation () {
+    
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////    Event Listeners    /////////////////////////////

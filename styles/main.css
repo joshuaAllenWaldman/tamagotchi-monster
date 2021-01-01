@@ -7,11 +7,13 @@
 }
 
 body {
+
     width: 100vw;
-    height: 80vh;  
+    max-height: 60vh;  
     background-color: ivory;
     background-image: url(/max-mckinnon-c9OCWLka764-unsplash.jpg);
     background-size: cover;
+    margin: 40px 0 40px;
 }
 
 /* //////////////////////// */
@@ -366,7 +368,7 @@ h4.stat- {
     position: relative;
     top: 4px;
     left: 4px;
-    animation: eyewander infinite 4s alternate;
+    animation: eyewander infinite 4s alternate, blink 1s;
     display: block;
 }
 .right-dead {
@@ -524,20 +526,23 @@ ellipse {
 #game-over-loud {
     color: black;
     margin: 200px auto;
-    font-size: 100px;
-    animation: gameOverBlowUp 4s  ease-in ;
+    font-size: 150px;
+    animation: gameOverBlowUp 2.5s ease-in, titleShadowPulse infinite 1s alternate ;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-    animation: titleShadowPulse infinite 1s alternate;
-
-
+    /* animation: titleShadowPulse infinite 1s alternate */
 }
 
 @keyframes gameOverBlowUp {
     from {
         font-size: 6px;
+        color: white;
+        opacity: 0.2;
     }
+
     to {
-        font-size: 100px;
+        font-size: 150px;
+        color: black;
+        opacity: 1;
 
     }
 }
