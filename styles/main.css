@@ -11,7 +11,7 @@ body {
     width: 100vw;
     max-height: 60vh;  
     background-color: ivory;
-    background-image: url(./max-mckinnon-c9OCWLka764-unsplash.JPG);
+    background-image: url(https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2252&q=80);
     background-size: cover;
     margin: 40px 0 40px;
 }
@@ -211,7 +211,7 @@ h4.stat- {
 /* tamagotchi casing */
 #outer-shell { 
     background-color: ivory;
-    background-image: url(cracked\ egg.JPG);
+    background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2193097.jpg);
     background-size: contain;
     width: 400px;
     height: 500px;
@@ -229,7 +229,7 @@ h4.stat- {
 /* tamagotchi screen */
 #inner-shell { 
     background-color: grey;
-    background-image: url(markus-spiske-iar-afB0QQw-unsplash.JPG);
+    background-image: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80);
     background-size: contain;
     top: -10px;
     width: 300px;
