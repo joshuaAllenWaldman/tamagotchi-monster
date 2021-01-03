@@ -2,11 +2,11 @@
   READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Welcome to "Digital Monster Caretaker Simulator"! This experience was designed by Joshua Allen Waldman in the year of our Lord, 2020.
+Welcome to "Digital Monster Caretaker Simulator"! This experience was designed by Joshua Allen Waldman in the year of our Lord 2020.
 
 Waldman created this experience as a way to deter those who came in contact with from purchasing Monsters all willy nilly. The hope was that through the experience potential Monster buyers would come to understand the great responsibility that came with ownership of a Monster. Between feeding, playing with, and forcing the Monster to sleep there's much to contend with inorder to keep the Monster happy and healthy. Waldman believed that most people would not want to deal with such responsibility and would give pu on the notion of owning a Monster after going through the experience. Only time will tell if he was correct in his assumption.
 
-"Digital Monster Caretaker Simulator" was created using basic HTML, CSS and JavaScript.
+"Digital Monster Caretaker Simulator" was created using  HTML5, CSS and JavaScript.
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,3 +20,6 @@ How to Play How to Play How to Play How to Play How to Play How to Play How to P
 
 
 Thank you for playing and please do not purchase a Monster in real life. 
+
+WireFrames:
+
