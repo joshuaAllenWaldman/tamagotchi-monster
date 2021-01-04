@@ -24,10 +24,7 @@ let tirednessMeter = document.getElementById('tiredness');
 // Get Player Input for Name
 let monsterName = ''
 function getMonsterName (){
-
-    monsterName = document.getElementById('user-name').value;
-
-    
+    monsterName = document.getElementById('user-name').value;    
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -147,7 +144,7 @@ function gameOverAnimation () {
 ///////////////////////////////////////////////////////////////////////////////
 
 startGameBtn.addEventListener('click', startGame)
-aboutBtn.addEventListener('click', () => {alert(`If you have to ask...`); alert(`You'll never know`)})
+aboutBtn.addEventListener('click', () => {alert(`Visit README.TXT in the repo.`)})
 
 feedBtn.addEventListener('click', function () {player.eat()});
 playBtn.addEventListener('click', function () {player.play()});
